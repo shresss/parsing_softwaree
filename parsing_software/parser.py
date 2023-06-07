@@ -17,4 +17,5 @@ tables = tabula.read_pdf('path/to/pdf_file.pdf', pages='all')
 
 for table in tables:
     print(table)
-"""accesses parsed data , will print each as a Pandas data frame"""
+"""accesses parsed data , will print each as a Pandas data frame
+Done By Shreyas V"""
