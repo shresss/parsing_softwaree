@@ -1,9 +1,9 @@
-import PyPDF2
+import pypdf
 import tabula
 """ import correct parsing software already integrated in python"""
 
-pdf_file = open('PUT_FILENAME_HERE.pdf', 'rb')
-pdf_reader = PyPDF2.PdfFileReader(pdf_file)
+pdf_file = open('Resume.pdf', 'rb')
+pdf_reader = pypdf.PdfFileReader(pdf_file)
 """ load file with PyPDF2"""
 
 text = ''
