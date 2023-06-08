@@ -1,15 +1,15 @@
-import pypdf
+from pypdf import PdfReader
 import tabula
 """ import correct parsing software already integrated in python"""
 
-pdf_file = open('Resume.pdf', 'rb')
-pdf_reader = pypdf.PdfFileReader(pdf_file)
+reader = PdfReader("example.pdf")
+number_of_pages = len(reader.pages)
 """ load file with PyPDF2"""
 
 text = ''
-for page in range(pdf_reader.numPages):
-    page_obj = pdf_reader.getPage(page)
-    text += page_obj.extractText()
+for page in range(number_of_pages):
+    page_obj = reader.pages[page]
+    text += page_obj.extract_text()
     """extracts text"""
 
 tables = tabula.read_pdf('path/to/pdf_file.pdf', pages='all')
